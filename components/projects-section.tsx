@@ -61,10 +61,10 @@ const TAGS = ["NMRDA Approved", "Bank Finance"]
 const FEATURED_TAGS = [...TAGS, "RERA Certified"]
 
 const TABS = [
-  { label: "All",       value: "all"       },
   { label: "Ongoing",   value: "ongoing"   },
   { label: "Completed", value: "completed" },
   { label: "Upcoming",  value: "upcoming"  },
+   { label: "All",       value: "all"       },
 ] as const
 
 type TabValue = (typeof TABS)[number]["value"]
@@ -335,7 +335,7 @@ ProjectCard.displayName = "ProjectCard"
 
 /* ─── Section ─── */
 export function ProjectsSection() {
-  const [activeTab, setActiveTab] = useState<TabValue>("all")
+  const [activeTab, setActiveTab] = useState<TabValue>("ongoing")
   const [isVisible, setIsVisible] = useState(false)
   const sectionRef = useRef<HTMLElement>(null)
   const hasAnimated = useRef(false)
